@@ -6,7 +6,7 @@ for file in *
 do
    if ! [[ $file == *.sh ]]; then
 	   echo $file
-	   openssl enc -aes-256-cbc -salt -in $file -out "$file=enc" -k $password
+	   openssl enc -aes-256-cbc -salt -in $file -out "$file=enc" -k $password # your file names will be appended with =enc
 	   rm -f $file  
    fi  
 done;
